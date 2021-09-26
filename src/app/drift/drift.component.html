@@ -1,0 +1,24 @@
+<div class="body" [hidden]="mustset">
+    <div class="faint" *ngIf="showdis">
+        <div class="card cord text-justify">
+            <p class="text-danger">INSUFFICIENT FUNDS</p>
+         <button class="btn-primary" (click)="showmme()">OKAY</button>
+        </div>
+       </div>
+    <div class="mycard">
+        <form class="card" [formGroup]="forms" novalidate (ngSubmit)="drift()" disabled>
+      <span class="currency">BALANCE</span><p class="balance"><span>{{dollar}}</span>{{balance}}</p>
+      <span class="change">YOUR DRIFT PLAN</span>
+      <select name="" id="" class="form-control-lg form-group">
+          <option [value]="driftPlan">{{driftPlan}}</option>
+      </select>
+      <div>
+         <div class="dollar">$</div>
+        <input type="text" class="form-control-lg form-group" formControlName="driftt" readonly>
+      </div>
+      <div>
+        <button class="btn btn-primary form-group" [disabled]="forms?.invalid">DRIFT</button>
+      </div>
+    </form>
+    </div>
+</div>

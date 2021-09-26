@@ -1,0 +1,73 @@
+<main class="row"[hidden]="hidden">
+    <main class="col-sm">
+        <div class="login">
+         <div class="header">
+            <img src="../../assets/IMAGES/ajologo.png" alt="">
+         </div>
+
+         <form class="body" [formGroup]="forms" novalidate (ngSubmit)="register()">
+            <div class="form">
+               <div class="faint" *ngIf="showdis">
+             <div class="card cord text-success">YOUR FORM SUBMITTED SUCCESSFULLY
+              <button class="btn-primary" (click)="showme()">OKAY</button>
+             </div>
+            </div>
+           <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-user text-white"></i></button>
+            <input type="text" class="form-control-lg" placeholder="Surname" formControlName="surname"  [ngClass]="{'borderdanger':surname?.invalid && surname?.touched}" [value]="surnam">
+           </div>
+           <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-child text-white"></i></button>
+            <input type="text" class="form-control-lg" placeholder="Other name" formControlName="othername"  [ngClass]="{'borderdanger':othername?.invalid && othername?.touched}" [value]="othernam">
+          </div>
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-home text-white"></i></button>
+            <input type="text" class="form-control-lg" placeholder="Country" formControlName="country"  [ngClass]="{'borderdanger':country?.invalid && country?.touched}" [value]="countr">
+          </div>
+          <div class="d-flex justify-content-center align-center">
+            <p class="text-danger">Phone Hint:+2348167302289</p>
+            </div>
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-mobile text-white"></i></button>
+            <input type="text" class="form-control-lg" placeholder="+2348167302322" formControlName="phone"  [ngClass]="{'borderdanger':phone?.invalid && phone?.touched || (phone?.value==me1)}" [value]="phon" (mouseout)="check()">
+          </div>
+          <div class="d-flex justify-content-center align-center">
+            <p class="text-danger">Email Hint:eben@gmail.com</p>
+            </div>
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-envelope text-white"></i></button>
+            <input type="text" class="form-control-lg" placeholder="Email" formControlName="email"  [ngClass]="{'borderdanger':email?.invalid && email?.touched || (email?.value==me2)}" [value]="emai" (mouseout)="check2()">
+          </div>
+          <div class="d-flex justify-content-center align-center">
+          <p class="text-danger">Password Hint:number or alphabeth, atleast 8</p>
+          </div>
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-lock text-white"></i></button>
+            <input type="password" class="form-control-lg" [placeholder]="passwor" formControlName="password" [ngClass]="{'borderdanger':password?.invalid && password?.touched}">
+          </div>
+          <div class="d-flex justify-content-center align-center">
+            <p class="text-danger">Password Hint:number or alphabeth, atleast 8</p>
+            </div>
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-lock text-white"></i></button>
+            <input type="password" class="form-control-lg" [placeholder]="confirmpasswor" formControlName="confirmpassword" [ngClass]="{'borderdanger':password?.value!=confirmpassword?.value && confirmpassword?.touched}">
+          </div>
+          </div>
+            <div class="logbtn">
+                <button [disabled]="forms?.invalid">CREATE ACCOUNT</button>
+            </div>
+            <div class="buttom d-flex justify-content-between">
+             <div (click)="disp()">Terms & Conditions</div>
+             <div (click)="forpassword()">Forgot Password?</div>
+            </div>
+            <div class="notreg d-flex text-white" (click)="login()">
+              Login
+              </div>
+        </form>
+
+        </div>
+    </main>
+</main>
+<router-outlet></router-outlet>
+
+<!-- <h1 *ngFor="let n of placeholder">{{n.name}}</h1> -->

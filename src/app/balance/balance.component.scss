@@ -1,0 +1,77 @@
+@import url(../../assets/BOOTSTRAP/bootstrap.css);
+    .mycard{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 28vh;
+        z-index: 9000;
+        .card{
+            width: 30%;
+            background-color: white;
+            height: 400px;
+            padding: 40px;
+            align-items: center;
+            .currency{
+                font-size: 30px;
+                font-weight: bold; 
+            }
+            .change{
+                font-size: 20px;
+                font-weight: bold; 
+            }
+            .balance{
+                color:#34D134;
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+           .refresh{
+               align-items: center;
+               justify-content: center;
+               display: flex;
+               color: white;
+               background-color: #34D134;
+               width: 50px;
+               height: 50px;
+               margin-bottom: 20px;
+            }
+            i{
+                font-size: 30px;
+           }
+        }
+    }
+
+.body{
+    animation-name: eben;
+    animation-duration: 2s;
+    transition: all 2s;
+}
+
+@keyframes eben{
+    0%{
+        opacity: 0.4;
+    }
+}
+@media(max-width:1177px){
+    .card{
+        min-width: 50%;
+    }
+}
+@media(max-width:730px){
+    .card{
+        min-width: 60%;
+    }
+}
+@media(max-width:600px){
+    .card{
+        min-width: 100%;
+    }
+}
+
+@media(max-width:414px){
+    .card{
+        min-width: 100%;
+    }
+}

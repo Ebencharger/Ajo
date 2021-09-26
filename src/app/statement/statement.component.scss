@@ -1,0 +1,33 @@
+@import url(../../assets/BOOTSTRAP/bootstrap.css);
+    .mycard{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 28vh;
+        z-index: 9000;
+        justify-content: center;
+        .crad{
+            width: 100%;
+            background-color: white;
+            height: 400px;
+            padding: 40px;
+            overflow-y: scroll;
+            align-items: center;    
+            table{
+                width: 100%;
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }   
+            th,td,tr{
+                border: 1px solid black;
+            }
+    }
+    }
+
+@keyframes eben{
+    0%{
+        opacity: 0.4;
+    }
+}

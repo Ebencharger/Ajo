@@ -1,0 +1,48 @@
+<main class="row" [hidden]="show">
+    <main class="col-sm">
+        <div class="faint" *ngIf="showdis">
+            <div class="card cord text-justify">
+                <p>WELCOME, Dear Drifter.</p>
+                <p>Please for this first time, click on the bar icon</p>
+                <p>i. Click CHANGE DRIFT PLAN and select your Drift plan. <br>
+                ii. Click LINK YOUR BANK, submit your account number and your bank name.</p>
+                <p>You can then begin to drift. Please read our Terms and Conditions</p>
+             <button class="btn-primary" (click)="showme()">OKAY</button>
+            </div>
+           </div>
+        <div class="body">
+            <div class="menu card" [hidden]="mymenu">
+                <div (click)="wallet()">WALLET</div>
+                <div (click)="drift()">DRIFT</div>
+                <div (click)="link()">LINK YOUR BANK</div>
+                <div (click)="changeplan()">CHANGE DRIFT PLAN</div>
+                <div (click)="cashout()">CASH OUT</div>
+                <div (click)="logout()">LOGOUT</div>
+            </div>
+            <div class="nav justify-content-between bg-white header">
+          <div (click)="menu()"><i class="fa fa-bars"></i><img src="../../assets/IMAGES/ajosplash.png" alt="" class="ml-5"></div>
+          <div><i class="fa fa-bell"></i></div>
+            </div>
+            <div class="name">
+             Hi,{{username}}
+            </div>
+            <div class="iddate">
+                <select name="" id="">
+                <option [value]="id">{{id}}</option>
+                </select>
+                <div>{{newdate}}</div>
+            </div>
+           <div class="bodyy">
+               <div class=" d-flex align-items-center justify-content-center bull"><i class="fa fa-spinner fa-spin text-white"></i><span class="text-danger">NOT NOW!</span></div>
+            <div class="buttomm">
+                <div routerLink="statement">STATEMENTS</div>
+                <div routerLink="transaction">TRANSACTION</div>
+                <div routerLink="help">HELP</div>
+                 </div>
+           </div>
+         
+        </div>
+
+    </main>
+</main>
+<router-outlet></router-outlet>

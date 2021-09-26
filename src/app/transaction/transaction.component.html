@@ -1,0 +1,20 @@
+<div class="body">
+    <div class="mycard">
+        <div class="card crad">
+            <div class="d-flex align-items-center">
+            <p>YOUR TRANSACTION HISTORY</p>
+            </div>
+      <table>
+          <th>S/N</th>
+          <th>AMOUNT CASHOUT</th>
+          <th>DATE CASHOUT</th>
+          <th>TIME CASHOUT</th>
+          <tr *ngFor="let n of AJO[0].user[service.id].transaction; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{n.amount}}</td>
+            <td>{{n.date}}</td>
+            <td>{{n.time}}</td>
+          </tr>
+      </table>
+    </div>
+</div>

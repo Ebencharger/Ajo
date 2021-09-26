@@ -1,0 +1,28 @@
+<div class="body">
+    <div class="mycard">
+        <div class="faint" *ngIf="showdis">
+            <div class="card cord text-success">{{text}}
+                <i [ngClass]="{'fa fa-spinner fa-spin border-warning':spin}"></i>
+             <button class="btn-primary" (click)="showme()" [disabled]="disable">OKAY</button>
+            </div>
+           </div>
+        <form class="card crad" [formGroup]="forms">
+      <span class="change form-group"> LINK YOUR BANK ACCOUNT</span>
+      <div class="text-bold text-danger">ACCOUNT NUMBER MUST BE NUMBER (10DIGITS); BANK NAME (E.G FCB, HERITAGE)</div>
+      <input type="text" name="" class="form-control-lg form-group w-100" id="type" formControlName="bankaccount" placeholder="YOUR BANK ACCOUNT NUMBER">
+     
+      <input type="text" name="" class="form-control-lg form-group w-100" id="type" formControlName="bankname" placeholder="YOUR BANK NAME">
+     
+      <select name="" id="amount" class="form-control-lg form-group" formControlName="accounttype"  (change)="change()">
+        <option value="SELECT DRIFT AMOUNT" [selected]="accounttype?.untouched">SELECT ACCOUNT TYPE</option>
+          <option>SAVING</option>
+          <option>CURRENT</option>
+          <option>NOT SURE</option>
+      </select>
+      <button class="btn btn-primary form-group" [disabled]="forms?.invalid" (click)="confirm()">CONFIRM ACCOUNT</button>
+      <div>
+        <button class="btn btn-primary form-group" [disabled]="link==false" (click)="setup()">LINK BANK</button>
+      </div>
+    </form>
+    </div>
+</div>

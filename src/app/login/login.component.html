@@ -1,0 +1,39 @@
+<main class="row"[hidden]="hidden">
+    <main class="col-sm">
+        <div class="login">
+         <div class="header">
+            <img src="../../assets/IMAGES/ajologo.png" alt="">
+         </div>
+
+         <form class="body" [formGroup]="forms" novalidate (ngSubmit)="login()">
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-mobile text-white"></i></button>
+            <input type="text" class="form-control-lg" placeholder="+2348167302322" formControlName="phone"
+            [ngClass]="{'borderdanger':phone?.invalid && phone?.touched}" [value]="message">
+            <!-- <div class="faint" *ngIf="(phone?.invalid && phone?.touched)">
+             <div class="card text-danger">{{service.phoneinv}}
+             </div>
+            </div> -->
+          </div>
+          <div class="phone d-flex">
+            <button class="mr-3"><i class="fa fa-lock text-white"></i></button>
+            <input type="password" class="form-control-lg" placeholder="Password" formControlName="password" [ngClass]="{'borderdanger':password?.invalid && password?.touched}" [value]="message2">
+          </div>
+          <div class="logbtn">
+              <button [disabled]="forms?.invalid">LOGIN</button>
+          </div>
+          <div class="buttom d-flex justify-content-between">
+           <div (click)="disp()">Terms & Conditions</div>
+           <div (click)="forpassword()">Forgot Password?</div>
+          </div>
+          <div class="notreg d-flex" (click)="register()">
+              <p class="not">Not Registered?</p>
+              <p class="signup">Sign up</p>
+            </div>
+        </form>
+
+        </div>
+    </main>
+</main>
+<!-- <app-button [message]="'Please Don't click me'"></app-button> -->
+<router-outlet></router-outlet>

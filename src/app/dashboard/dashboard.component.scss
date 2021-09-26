@@ -1,0 +1,259 @@
+@import url(../../assets/BOOTSTRAP/bootstrap.css);
+.row, .col-sm, body, html{
+    padding: 0px;
+    margin: 0px !important;
+}
+.row{
+    animation-name: eben;
+    animation-duration: 2s;
+    transition: all 2s;
+}
+.bull{
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 30vh;
+}
+.header{
+    max-width: 100%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    height: 80px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    i{
+        font-size: 25px;
+        color: #34D134;
+    }
+    img{
+        width: 60;
+        height: 60px;
+    }
+}
+.name{
+    max-width: 100%;
+    height: 50px;
+    background-color: #34D134;
+    display: flex;
+    padding-left:50px;
+    color: white;
+    font-size: 25px;
+    align-items: center;
+}
+.iddate{
+    max-width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-left:50px;
+    padding-right: 50px;
+    color: white;
+    font-size: 25px;
+    align-items: center;
+
+    select{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+    }
+}
+.menu{
+    position: absolute;
+    width: 30%;
+    left: 15px;
+    top: 60px;
+    z-index: 11000;
+    background: #34D134;
+    height: 500px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+
+    div{
+        width: 100%;
+        background-color: #191a19;
+        height: 50px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+   .buttom{
+        width: 98%;
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+        justify-content: space-between;
+        color: white;
+        background-color: black;
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+    }
+
+    .faint{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 20000;
+        animation-name: eben;
+        animation-duration: 2s;
+        transition: all 2s;
+        left:0px;
+        top:0px
+    }
+    .cord{
+        position: absolute;
+        width: 40%;
+        left: 30%;
+        height: 470px;
+        padding: 20px;
+        z-index: 20000;
+        top: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: bold;
+        button{
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            color: white;
+            margin-top: 20px;
+        }
+    }  
+
+    .bodyy{
+        max-width: 100%;
+        background-color: rgb(17, 16, 16);
+        height: 475px;
+       
+        .buttomm{
+            width: 100%;
+            display: flex;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-between;
+            color: white;
+            background-color: black;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            align-items: center;
+        }
+    }
+@keyframes eben{
+    0%{
+        opacity: 0.4;
+    }
+}
+
+@media(max-width:1177px){
+    .menu{
+        min-width: 40%;
+    }
+}
+@media(max-width:1024px){
+    .bodyy{
+        height: 1090px !important;
+    }
+}
+@media(max-width:768px){
+    .bodyy{
+        height: 854px !important;
+    }
+}
+@media(max-width:730px){
+    .menu{
+        min-width: 50%;
+    }
+}
+@media(max-width:600px){
+    .menu{
+        min-width: 70%;
+    }
+}
+
+@media(max-width:414px){
+    .crad{
+        min-width: 100%;
+        overflow-x: scroll;
+    }
+    .bodyy{
+        height: 560px !important;
+    }
+    .menu{
+        min-width: 93%;
+    }
+    .faint{
+        width: 100%;
+        .card{
+            width: 100%;
+            left:0%;
+            text-align: center;
+        }
+    }
+    .menu{
+        min-width: 80%;
+    }
+}
+
+
+@media(max-width:411px){
+.bodyy{
+    height: 650px !important;
+}
+}
+
+@media(max-width:400px){
+    .name{
+        padding-left:10px;
+    }
+    .iddate{
+        padding-left:10px;
+        padding-right: 10px;
+    
+    }
+}
+
+@media(max-width:375px){
+    .bodyy{
+        height: 490px !important;
+    }
+}
+
+@media(max-width:360px){
+    .bodyy{
+        height: 460px !important;
+    }
+    .name{
+        padding-left:20px;
+    }
+    .iddate{
+        padding-left:20px;
+        padding-right: 20px;
+    
+}
+.bodyy{
+    height: 468px;
+}
+.cord{
+    font-size: 18px;
+}
+}
+
+@media(max-width:320px){
+    .bodyy{
+        height: 395px !important;
+    }
+}

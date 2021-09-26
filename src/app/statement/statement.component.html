@@ -1,0 +1,32 @@
+<div class="body">
+    <div class="mycard">
+        <div class="card crad">
+            <div class="d-flex align-items-center">
+            <p>YOUR ACCOUNT STATEMENT</p>
+            </div>
+      <table>
+          <th>S/N</th>
+          <th>OPENING BALANCE</th>
+          <th>OPENING DATE</th>
+          <th>OPENING TIME</th>
+          <tr>
+            <td>1</td>
+            <td>{{AJO[0].user[service.id].regbalance}}</td>
+            <td>{{AJO[0].user[service.id].datereg}}</td>
+            <td>{{AJO[0].user[service.id].timereg}}</td>
+          </tr>
+      </table>
+      <table class="mt-4">
+          <th>S/N</th>
+          <th>AMOUNT DRIFTED</th>
+          <th>DATE DRIFTED</th>
+          <th>TIME DRIFTED</th>
+          <tr *ngFor="let n of AJO[0].user[service.id].statement; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{n.amountDrif}}</td>
+            <td>{{n.date}}</td>
+            <td>{{n.time}}</td>
+          </tr>
+      </table>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+  <div class="mycard">
+        <div class="card">
+      <span class="currency">BALANCE</span><p class="balance"><span>{{dollar}}</span>{{balance}}</p>
+      <div class="refresh" (click)="spinner()">
+          <i class="fa fa-spinner" [hidden]="display"></i>
+          <i [ngClass]="{'fa fa-spinner fa-spin':show}"></i>
+      </div>
+      <span class="change">CHANGE YOUR CURRENCY</span>
+      <select name="" id="" class="form-control-lg" [(ngModel)]="mylast" (change)="curr()" (click)="choose()">
+          <option value="DOLLAR">DOLLAR</option>
+          <option value="EURO">EURO</option>
+          <option value="NAIRA">NAIRA</option>
+      </select>
+        </div>
+    </div>
+  

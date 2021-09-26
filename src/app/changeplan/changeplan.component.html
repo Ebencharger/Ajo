@@ -1,0 +1,40 @@
+<div class="body">
+    <div class="mycard">
+        <div class="faint" *ngIf="showdis">
+            <div class="card cord text-success">YOUR DRIFT PLAN CHANGED SUCCESSFULLY
+             <button class="btn-primary" (click)="showme()">OKAY</button>
+            </div>
+           </div>
+        <form class="card crad" [formGroup]="forms">
+      <span class="change"> ACTIVATE YOUR DRIFT PLAN</span>
+      <select name="type" id="type" class="form-control-lg form-group" (change)="changeme(this)" formControlName="type">
+          <option value="SELECT DRIFT PLAN" [selected]="type?.untouched">SELECT DRIFT PLAN</option>
+          <option>YEARLY</option>
+          <option>WEEKLY</option>
+          <option>MONTHLY</option>
+      </select>
+      <select name="" id="drift" class="form-control-lg form-group" (change)="changeme(this)" formControlName="drift">
+        <option value="SELECT DRIFT TYPE" [selected]="drift?.untouched">SELECT DRIFT TYPE</option>
+          <option>DAILY</option>
+          <option>WEEKLY</option>
+          <option>MONTHLY</option>
+      </select>
+      <select name="" id="amount" class="form-control-lg form-group" (change)="changeme(this)" formControlName="amount">
+        <option value="SELECT DRIFT AMOUNT" [selected]="amount?.untouched">SELECT DRIFT AMOUNT</option>
+          <option>1</option>
+          <option>2</option>
+          <option>5</option>
+          <option>10</option>
+          <option>20</option>
+          <option>50</option>
+          <option>100</option>
+          <option>200</option>
+          <option>500</option>
+          <option>1000</option>
+      </select>
+      <div>
+        <button class="btn btn-primary form-group" [disabled]="myplan!=3" (click)="setup()">SETUP DRIFT PLAN</button>
+      </div>
+    </form>
+    </div>
+</div>

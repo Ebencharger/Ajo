@@ -1,0 +1,94 @@
+@import url(../../assets/BOOTSTRAP/bootstrap.css);
+
+    .mycard{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 28vh;
+        z-index: 9000;
+        .card{
+            width: 30%;
+            background-color: white;
+            height: 400px;
+            padding: 40px;
+            align-items: center; 
+            overflow-y: scroll;
+            .terc{
+      font-weight: bold;
+      font-size: 20px;
+            }
+            .careful{
+   font-weight: bold;
+   font-size: 15px;
+            }
+           li{
+               text-align: justify;
+           } 
+        }
+
+    }
+
+
+
+
+
+
+@keyframes eben{
+    0%{
+        opacity: 0.4;
+    }
+}
+
+@media(max-width:1177px){
+    .card{
+        min-width: 50%;
+    }
+    .cord{
+        min-width: 60% !important;
+        margin-left: -5%;
+    }
+}
+@media(max-width:1070px){
+    .cord{
+        min-width: 80% !important;
+        margin-left: -15%;
+    }
+}
+@media(max-width:800px){
+    .cord{
+        min-width: 100% !important;
+        margin-left: -25%;
+    }
+}
+@media(max-width:740px){
+    .cord{
+       font-size: 20px;
+    }
+}
+@media(max-width:730px){
+    .card{
+        min-width: 60%;
+    }
+}
+@media(max-width:600px){
+    .card{
+        min-width: 100%;
+    }
+}
+
+
+@media(max-width:414px){
+    .card{
+        min-width: 100%;
+    }
+    .faint{
+        width: 100%;
+         .cord{
+            width: 100%;
+            margin-left: -25%;
+            text-align: center;
+         }
+    }
+}

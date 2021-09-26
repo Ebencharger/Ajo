@@ -1,0 +1,21 @@
+<div class="body" [hidden]="see">
+    <div class="mycard">
+        <div class="faint" *ngIf="showdis">
+            <div class="card cord text-success">{{text}}
+                <i [ngClass]="{'fa fa-spinner fa-spin border-warning':spin}"></i>
+             <button class="btn-primary" (click)="showme()" [disabled]="disable">OKAY</button>
+            </div>
+           </div>
+        <form class="card crad" [formGroup]="forms" novalidate (ngSubmit)="setup()">
+      <span class="change form-group">CASHOUT YOUR DRIFT</span>
+      <div class="text-danger form-group mb-3">NOTE: 0.10% OF YOUR DRIFT WILL BE DEDUCTED FOR ACCOUNT KEEPING!</div>
+      <span>YOU Can only cashout {{balance-(balance*0.10) | currency}}</span>
+      <span class="currency">BALANCE</span><p class="balance"><span>{{dollar}}</span>{{balance}}</p>
+      <span>AMOUNT TO CASHOUT:(Max of 500 Digits)</span>
+      <input type="number" name="" class="form-control-lg form-group w-100" id="type" formControlName="cashout" placeholder="AMOUNT TO CASHOUT">
+      <div>
+        <button class="btn btn-primary form-group" [disabled]="forms?.invalid">CASH OUT</button>
+      </div>
+    </form>
+    </div>
+</div>

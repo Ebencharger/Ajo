@@ -1,0 +1,82 @@
+@import url(../../assets/BOOTSTRAP/bootstrap.css);
+.splash{
+    background-color: black;
+    max-width: 100%;
+    position: absolute;
+    z-index: 4000;
+    height: 645px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: eben;
+    animation-duration: 2s;
+    transition: all 2s;
+        img{
+            max-width: 30%;
+            margin-top: -150px;   
+        }
+
+        .spin{
+            position: absolute;
+            font-size: 25px;
+            top: 500px;
+        }
+        .power{
+     position: absolute;
+     color: white;
+     bottom: 20px;
+        }
+}
+
+@keyframes eben{
+    0%{
+        opacity: 0.4;
+    }
+}
+
+@media(max-width:1024px){
+    .splash{
+        min-width: 100%;
+        height: 1366px;
+     }
+     .power{
+        position: absolute;
+        color: white;
+        bottom: 400px !important;
+           }
+}
+
+@media(max-width:414px){
+    .splash{
+        width: 100%;
+        height: 736px !important;
+    }
+
+    .power{
+        display: block !important;
+    }
+}
+
+@media(max-width:411px){
+    .splash{
+        height: 823px !important;
+    }
+    .power{
+        position: absolute;
+        color: white;
+        bottom: 300px !important;
+           }
+}
+
+@media (max-width:360px){
+    .splash{
+        height: 640px !important;
+    }
+    .spin{
+        top: 400px !important;
+    }
+    .power{
+        display: block !important;
+        bottom: 100px !important;
+    }
+}
