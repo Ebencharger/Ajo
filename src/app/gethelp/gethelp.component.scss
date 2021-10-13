@@ -246,13 +246,9 @@ li{
     }
 }
 
-@media(max-width:383px){
-    .terc{
-        font-size: 22px !important;
-    }
-    .careful{
-        font-weight: bold !important;
-        font-size: 14px !important;
+@media(max-width:540px){
+    .login{
+        height: 720px !important;
     }
 }
 
@@ -266,5 +262,15 @@ li{
     }
     .terms{
         width: 360% !important;
+    }
+}
+
+@media(max-width:383px){
+    .terc{
+        font-size: 22px !important;
+    }
+    .careful{
+        font-weight: bold !important;
+        font-size: 14px !important;
     }
 }

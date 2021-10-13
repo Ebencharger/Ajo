@@ -124,7 +124,7 @@ export class NewuserComponent implements OnInit {
     let { surname, othername, email, phone, country, password } = this.forms.value;
     let acr = country.substr(0, 3).toUpperCase();
     let uniq = "AJO"
-    this.newuser = { id: uniq + "-" + acr + "-" + "00" + (this.usercount + 1), time: 0, surname: surname, othername: othername, email: email, phone: phone, country: country, password: password, timereg: this.service.time, datereg: this.service.date, balance: 0, regbalance: 0, driftplan: [], statement: [], transaction: [], link: "false", day: this.day, countday: this.day, month:this.newmonth, countmonth: this.newmonth, year: this.date.getFullYear(), countyear: this.date.getFullYear() }
+    this.newuser = { id: uniq + "-" + acr + "-" + "00" + (this.usercount + 1), time: 0, surname: surname, othername: othername, email: email, phone: phone, country: country, password: password, timereg: this.service.time, datereg: this.service.date, balance: 0, regbalance: 0, driftplan: [], statement: [], transaction: [], link: false, day: this.day, countday: this.day, month:this.newmonth, countmonth: this.newmonth, year: this.date.getFullYear(), countyear: this.date.getFullYear() }
     this.user = this.newuser;
     this.AJO[0].user.push(this.user);
     localStorage.setItem("AJO", JSON.stringify(this.AJO))

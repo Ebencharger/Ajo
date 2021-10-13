@@ -43,17 +43,13 @@ AJO:any;
     console.log(this.myplan);
    }
 
-   if (this.timecount!="") {
+   if (this.timecount!="" && this.AJO[0].user[this.service.id].countyear==this.AJO[0].user[this.service.id].year) {
     this.myplan=0;
     console.log(this.myplan);
   }
-  else if (this.timecount=="") {
+  else if (this.timecount=="" && this.AJO[0].user[this.service.id].countyear==this.AJO[0].user[this.service.id].year) {
     this.myplan=this.myplan
-  }
-  if (this.AJO[0].user[this.service.id].countyear==this.AJO[0].user[this.service.id].year) {
-    this.myplan=0;
-  }
-    
+  }  
   }
 setup(){
   let{type,drift,amount}=this.forms.value;
